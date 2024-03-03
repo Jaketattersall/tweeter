@@ -1,0 +1,155 @@
+.turnRed {
+    color:red;
+  }
+  
+  .new-tweet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #f4f1ec;
+    /* text-align: center; What are you humming about*/
+  }
+  
+  .counter {
+    display: flex;
+    align-items: start;
+    font-family: 'Bungee', sans-serif;
+  }
+  
+  button {
+    font-family: 'Bungee', sans-serif;
+    background-color: #4056A1; /* Default background color */
+    color: #FFFFFF;
+  
+  }
+  
+  .button-and-counter {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  textarea { /*Type your tweet...*/
+    border: none;
+    border-bottom: 4px solid black;
+    padding: 8px;
+    background-color: #f4f1ec;
+    width: 100%;
+  }
+  
+  article {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #f4f1ec;
+    border: 3px solid black;
+    margin: 200px;
+  }
+  
+  article.tweet:hover {
+    box-shadow: 12px 12px 2px 1px rgba(36, 36, 38, 0.2);
+  }
+  
+  
+  article.tweet header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f4f1ec;
+    padding: 20px;
+  }
+  
+  article.tweet img { /*Profile Pic*/
+    width: 5%;
+    align-items: start;
+    margin: 5px;
+  }
+  
+  article.tweet .user-first-name { /*Chris*/
+    margin-right: auto; 
+  }
+  
+  .tweet-content { /*Black Line*/
+    padding: 20px;
+    border-bottom: 3px solid black;
+    margin: 10px;
+  }
+  
+  .tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    font-size: 70%;
+    margin: 10px;
+  }
+  
+  .tweet-footer-icons i {
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .tweet-footer-icons i:hover {
+    color: #ab962c; 
+  }
+  
+  #alert {
+    border: 3px solid red;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #f4f1ec;
+  }
+  
+  #alertNoChar {
+    border: 3px solid red;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: #f4f1ec;
+  }
+  
+  
+  
+  @media only screen and (min-width: 1024px) {
+    .new-tweet {
+      flex-direction: column; 
+      justify-content: center;
+      float:right;
+      margin-top: 30%; /*Set to the height of the navabar so that the header is pushed below*/ 
+    
+    }
+  
+    .tweets-container {
+      float: right;
+      flex: 1;
+    }
+  
+    article {
+      margin: 100px;
+    }
+  
+    article.tweet header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #f4f1ec;
+      padding: 20px;
+    }
+    
+  }
