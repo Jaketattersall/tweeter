@@ -6,6 +6,7 @@
  */
 
  html {
+
     font-family: sans-serif; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
@@ -301,6 +302,7 @@
   [type="reset"],
   [type="submit"] {
     -webkit-appearance: button; /* 2 */
+    appearance: button;
   }
   
   /**
@@ -388,6 +390,7 @@
   [type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
+    appearance: button;
   }
   
   /**
