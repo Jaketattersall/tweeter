@@ -51,7 +51,7 @@
     justify-content: center;
     background-color: #f4f1ec;
     border: 3px solid black;
-    margin: 200px;
+    margin: 100px 50px;
   }
   
   article.tweet:hover {

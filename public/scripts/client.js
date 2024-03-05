@@ -69,10 +69,20 @@ const escape = function(str) {
   
   $(document).ready(() => {
     //Hide error messages
+  
     $("#alert").hide();
     $("#alertNoChar").hide();
   
     //Event listener for submit and prevent its default behaviour.
+    const loadTweets = function() {
+      $.ajax("/tweets/", { method: "GET" })
+        .then(function(response) {
+          renderTweets(response);
+        })
+        .catch(function(error) {
+          console.log("Error", error);
+        });
+    };
     $("#tweet-form").on("submit", (event) => {
       event.preventDefault();
   
@@ -113,18 +123,11 @@ const escape = function(str) {
   
       // This serialized data should be sent to the server in the data field of the AJAX POST request.
       $.post("/tweets/", serializedData).then(() => {
+        $("#tweet-text").val("")
         loadTweets();
       });
   
       //Fetches tweets from the /tweets page. Uses jQuery to make a request to /tweets and receive the array of tweets as JSON.
-      const loadTweets = function() {
-        $.ajax("/tweets/", { method: "GET" })
-          .then(function(response) {
-            renderTweets(response);
-          })
-          .catch(function(error) {
-            console.log("Error", error);
-          });
-      };
     });
+    loadTweets();
   });
