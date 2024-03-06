@@ -83,6 +83,7 @@ const escape = function(str) {
           console.log("Error", error);
         });
     };
+
     $("#tweet-form").on("submit", (event) => {
       event.preventDefault();
   
@@ -113,7 +114,7 @@ const escape = function(str) {
         $("#alert").slideDown();
         alertElement.style.display = "flex";
         //eraseText();
-        counterRestart();
+        //counterRestart();
         return;
       }
   
@@ -124,6 +125,7 @@ const escape = function(str) {
       // This serialized data should be sent to the server in the data field of the AJAX POST request.
       $.post("/tweets/", serializedData).then(() => {
         $("#tweet-text").val("")
+        counterRestart()
         loadTweets();
       });
   
